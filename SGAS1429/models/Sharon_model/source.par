@@ -1,0 +1,22 @@
+cleanlens
+        cleanset        1 2.8240
+        ncont   1 clean.fits
+        echant  40
+        imframe 3 ../drz/jw04125-o013_t029_nircam_clear-f150w_i2d_sci.fits.gz
+        sframe  src_a4_150.fits
+#        imframe 3 ../drz/jw04125-o013_t029_nircam_clear-f115w_i2d_sci.fits.gz
+#        sframe  src_a1_115.fits
+#        imframe 3 ../drz/jw04125-o013_t029_nircam_clear-f210m_i2d_sci.fits.gz
+#        sframe  src_a1_210.fits
+#        imframe 3 ../drz/jw04125-o013_t029_nircam_clear-f277w_i2d_sci.fits.gz
+#        sframe  src_a1_277.fits
+#        imframe 3 ../drz/jw04125-o013_t029_nircam_clear-f300m_i2d_sci.fits.gz
+#        sframe  src_a1_300.fits
+#        imframe 3 ../drz/jw04125-o013_t029_nircam_clear-f444w_i2d_sci.fits.gz
+#        sframe  src_a1_444.fits
+        s_n     1000.0
+        s_echant        40.0
+        contour 1 poly_arc4.dwcs
+        c_image poly_arc3.dwcs
+        end
+
