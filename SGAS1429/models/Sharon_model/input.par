@@ -1,0 +1,102 @@
+runmode
+	reference 3 217.4783710000 12.0432339000
+	arclet    1 arcs.dat
+	inverse   3 0.5
+	sigposArcsec 0.1
+	sigpos 0.1
+        verbose 1
+	end
+image
+	multfile     1 arcs.dat
+	forme        -2
+	mult_wcs     3
+        critic       1  -0.964 2.995 0 0.01  2.824
+	sigposArcsec 0.3
+	end
+grille
+	nombre     128
+	polaire     0
+	nlentille   200
+	nlens_crit  1
+	nlens_opt   2
+	end
+potentiel 1 cluster: PIEMD
+        profil             81
+        x_centre           0
+        y_centre           0
+        ellipticite        0.
+        angle_pos          0.
+        core_radius_kpc    60
+        cut_radius_kpc     1500.0        
+        v_disp             1000
+        z_lens             0.550
+        end
+limit 1
+        x_centre         1 -3.000 3.000 0.010
+        y_centre         1 -3.000 3.000 0.010
+        ellipticite      1  0.0 0.8 0.001
+        angle_pos        1  0.000 180.000 0.100
+	core_radius_kpc  1  10.  100.  0.10
+        cut_radius_kpc   0  1000. 2500. 0.10
+        v_disp           1  100.  2000. 0.10        
+        end
+potentiel 1 #BCG
+        profil     81
+        x_centre     0.000
+        y_centre     0.000
+        ellipticite     0.078
+        angle_pos       89.900
+        core_radius_kpc     0.128
+        cut_radius_kpc     25.679
+        v_disp     111.023
+        z_lens     0.550
+        end
+limit 2
+        x_centre         0 -1 1 0.010
+        y_centre         0 -1 1 0.010
+        ellipticite      1  0.0 0.1 0.001
+        angle_pos        1  0.000 180.000 0.100
+	core_radius_kpc  1  0.  2.  0.10
+        cut_radius_kpc   1  20. 500. 0.10
+        v_disp           1  100. 500. 0.10        
+        end
+potfile
+        filein  3 galcat.cat
+        zlens   0.55
+        corekpc 0.15
+	type    81
+        mag0    20.1
+        sigma   1 50 250
+        cutkpc  1 3 50
+#        sigma   0 120 50 150
+#        cutkpc  0 30 3 50
+        slope   0 4.
+        vdslope 0 4.
+        end
+cline
+	nplan    1 2.824
+	dmax     15.000
+        algorithm   MARCHINGSQUARES
+        limitHigh   1.0
+        limitLow    0.100
+	end
+grande
+	iso         0 0 0.000 0.000 0.000
+	name        best
+	profil      0 0
+	contour     1 0
+	large_dist  0.300
+	end
+cosmology
+	H0         70.000
+	omegaM     0.300
+	omegaX     0.700
+	wX         -1.000
+	end
+champ
+       xmin    -15
+       xmax    15
+       ymin    -15
+       ymax    15
+       end
+fini
